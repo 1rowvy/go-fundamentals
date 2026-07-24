@@ -1,17 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 
-	var x int
+	var x string
 
 	fmt.Scan(&x)
 
-	fmt.Println(square(x))
+	if n, err := strconv.Atoi(x); err != nil {
+		fmt.Print("bad")
+	} else {
+		fmt.Println("ok", n)
+	}
 
-}
-
-func square(n int) int {
-	return n * n
 }
