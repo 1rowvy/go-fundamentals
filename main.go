@@ -9,5 +9,5 @@ func main() {
 
 	fmt.Scan(&x, &y)
 
-	fmt.Println(x + y)
+	fmt.Println(x * y)
 }
