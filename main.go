@@ -3,5 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, Go!")
+	var (
+		x, y int
+	)
+
+	fmt.Scan(&x, &y)
+
+	fmt.Println(x + y)
 }
