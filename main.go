@@ -1,13 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
 
 func main() {
-	var (
-		x, y int
-	)
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
 
-	fmt.Scan(&x, &y)
+	str := scanner.Text()
 
-	fmt.Println(x * y)
+	strUp := strings.ToUpper(str)
+
+	fmt.Println(strUp)
 }
