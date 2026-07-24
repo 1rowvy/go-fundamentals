@@ -2,20 +2,21 @@ package main
 
 import "fmt"
 
+type Point struct {
+	X int
+	Y int
+}
+
 func main() {
+	var x1, y1, x2, y2 int
 
-	words := make(map[string]bool)
+	fmt.Scan(&x1, &y1, &x2, &y2)
 
-	for {
-		var str string
+	p1 := Point{x1, y1}
+	p2 := Point{x2, y2}
 
-		if _, err := fmt.Scan(&str); err != nil {
-			break
-		}
+	dx := p2.X - p1.X
+	dy := p2.Y - p1.Y
 
-		words[str] = true
-	}
-
-	fmt.Print(len(words))
-
+	fmt.Print(dx*dx + dy*dy)
 }
