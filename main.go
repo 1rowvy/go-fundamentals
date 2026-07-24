@@ -5,12 +5,18 @@ import (
 )
 
 func main() {
-	var (
-		name string
-		age  int
-	)
+	var x int
 
-	fmt.Scan(&name, &age)
+	fmt.Scan(&x)
 
-	fmt.Printf("Hi, %s! You are %d years old.", name, age)
+	switch {
+	case x%15 == 0:
+		fmt.Print("FizzBuzz")
+	case x%3 == 0:
+		fmt.Print("Fizz")
+	case x%5 == 0:
+		fmt.Print("Buzz")
+	default:
+		fmt.Println(x)
+	}
 }
