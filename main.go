@@ -3,23 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	var max int
 
-	if _, err := fmt.Scan(&max); err != nil {
-		return
-	}
+	words := make(map[string]bool)
 
 	for {
-		var a int
-		if _, err := fmt.Scan(&a); err != nil {
+		var str string
+
+		if _, err := fmt.Scan(&str); err != nil {
 			break
 		}
 
-		if a > max {
-			max = a
-		}
+		words[str] = true
 	}
 
-	fmt.Print(max)
+	fmt.Print(len(words))
 
 }
