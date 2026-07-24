@@ -1,17 +1,17 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var x, total int
+
+	var x int
 
 	fmt.Scan(&x)
 
-	for i := 1; i <= x; i++ {
-		total += i
-	}
+	fmt.Println(square(x))
 
-	fmt.Println(total)
+}
+
+func square(n int) int {
+	return n * n
 }
