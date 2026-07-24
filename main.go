@@ -1,20 +1,21 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
 
 func main() {
+	var max int
 
-	var x string
+	for {
+		var a int
+		if _, err := fmt.Scan(&a); err != nil {
+			break
+		}
 
-	fmt.Scan(&x)
-
-	if n, err := strconv.Atoi(x); err != nil {
-		fmt.Print("bad")
-	} else {
-		fmt.Println("ok", n)
+		if a > max {
+			max = a
+		}
 	}
+
+	fmt.Print(max)
 
 }
